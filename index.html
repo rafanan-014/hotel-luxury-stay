@@ -1,9 +1,11 @@
 <!DOCTYPE html>
+<!-- https://rafanan-014.github.io/hotel-luxury-stay/ -->
 <html lang="fr"> 
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Luxury Stay - Hôtel de Prestige</title>
+        <script src="script.js" defer></script>
         <script src="https://cdn.tailwindcss.com"></script>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
         <style>
@@ -21,12 +23,18 @@
         </h1>
 
         <div class="hidden md:flex items-center gap-10 text-[11px] font-bold uppercase tracking-[0.2em] text-gray-600">
-            <a href="#" class="hover:text-amber-600 transition">Accueil</a>
+            <a href="index.html" class="hover:text-amber-600 transition">Accueil</a>
             <a href="#chambres" class="hover:text-amber-600 transition">Chambres</a>
             <a href="#about" class="hover:text-amber-600 transition">À Propos</a>
-            <a href="#contact" class="bg-amber-600 text-white px-5 py-2.5 rounded-sm hover:bg-black transition">Réserver</a>
+            <a href="contact.html" class="hover:text-amber-600 transition">Contact</a>
+            <a href="contact.html" class="bg-amber-600 text-white px-5 py-2.5 rounded-sm hover:bg-black transition">Réserver</a>
         </div>
-
+        <div id="mobile-menu" class="hidden md:hidden ...">
+            <a href="index.html" class="mobile-link ...">Accueil</a>
+            <a href="#chambres" class="mobile-link ...">Chambres</a>
+            <a href="#about" class="mobile-link ...">À Propos</a>
+            <a href="contact.html" class="mobile-link ...">Contact</a>
+        </div>
         <button id="menu-btn" class="md:hidden p-2 text-gray-600 focus:outline-none">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -34,12 +42,6 @@
         </button>
     </div>
 
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full left-0 px-6 py-6 shadow-xl flex flex-col gap-6 text-xs font-bold uppercase tracking-widest text-gray-600">
-        <a href="#" class="mobile-link hover:text-amber-600">Accueil</a>
-        <a href="#chambres" class="mobile-link hover:text-amber-600">Chambres</a>
-        <a href="#about" class="mobile-link hover:text-amber-600">À Propos</a>
-        <a href="#contact" class="mobile-link text-amber-600">Réserver</a>
-    </div>
 </nav>
 
     <header class="relative h-screen flex items-center justify-center overflow-hidden">
@@ -65,8 +67,8 @@
                 <label class="block text-xs uppercase tracking-widest text-gray-400 font-semibold mb-2">Voyageurs</label>
                 <select class="w-full bg-gray-50 border-none p-3 rounded outline-none">
                     <option>1 Adulte</option>
-                    <option selected>2 Adultes</option>
-                    <option>3 Adultes</option>
+                    <option selected>3 Adultes</option>
+                    <option>2 Adultes</option>
                     <option>Famille (4+)</option>
                 </select>
             </div>
@@ -153,7 +155,7 @@
                     <li><a href="#" class="hover:text-amber-500 transition">À propos de nous</a></li>
                     <li><a href="#chambres" class="hover:text-amber-500 transition">Nos Chambres</a></li>
                     <li><a href="#" class="hover:text-amber-500 transition">Services & Spa</a></li>
-                    <li><a href="#" class="hover:text-amber-500 transition">Contact</a></li>
+                    <li><a href="contact.html" class="hover:text-amber-500 transition">Contact</a></li>
                 </ul>
             </div>
 
