@@ -56,3 +56,23 @@
 
     revealElements.forEach((el) => observer.observe(el));
 }
+
+// Rehefa misokatra ny pejy
+window.addEventListener('DOMContentLoaded', () => {
+    const navbar = document.getElementById('navbar');
+    const heroSection = document.querySelector('header.relative.h-screen'); // Mijery raha misy Hero lehibe
+
+    if (!heroSection) {
+        // Raha tsy misy sary lehibe (header), dia ataovy mainty ny soratra
+        navbar.classList.add('bg-white', 'shadow-sm', 'text-slate-900');
+        navbar.classList.remove('text-white');
+        
+        // Raha mampiasa Tailwind ny rohy (links)
+        const navLinks = navbar.querySelectorAll('a');
+        navLinks.forEach(link => {
+            if (!link.classList.contains('bg-amber-600')) { // Tsy ovaina ny bokotra Réserver
+                link.classList.add('text-slate-900');
+            }
+        });
+    }
+});

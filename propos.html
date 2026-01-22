@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos - Luxury Stay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="smoothscript.js" defer></script>
+</head>
+<body class="bg-slate-50 text-slate-900 no-hero">
+
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-6">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="text-xl font-bold tracking-widest font-serif">
+                LUXURY STAY
+            </a>
+            
+            <div class="hidden md:flex items-center gap-10 text-[11px] font-bold uppercase tracking-[0.2em]">
+                <a href="index.html" class="hover:text-amber-600 transition">Accueil</a>
+                <a href="index.html#chambres" class="hover:text-amber-600 transition">Chambres</a>
+                <a href="propos.html" class="hover:text-amber-600 transition">À Propos</a>
+                <a href="contact.html" class="bg-amber-600 text-white px-5 py-2.5 rounded-sm hover:bg-black transition">
+                    Réserver
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative h-[60vh] flex items-center justify-center bg-slate-900">
+        <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1600&q=80" 
+             class="absolute inset-0 w-full h-full object-cover opacity-60" alt="About Hero">
+        <div class="relative z-10 text-center text-white">
+            <h1 class="text-5xl md:text-7xl font-serif mb-4 reveal">Notre Histoire</h1>
+            <p class="uppercase tracking-[0.3em] text-sm opacity-80 reveal delay-200">L'excellence depuis 2005</p>
+        </div>
+    </header>
+
+    <section class="max-w-4xl mx-auto px-6 py-24 bg-white -mt-20 relative z-20 shadow-xl rounded-sm">
+        <div class="reveal">
+            <h2 class="text-3xl font-serif mb-8 text-center text-amber-600">Un héritage de luxe</h2>
+            <div class="space-y-6 text-gray-600 leading-relaxed text-lg">
+                <p>
+                    Fondé par la famille Ramazavaloha en 2005, Luxury Stay a commencé comme une petite maison d'hôtes de charme. 
+                    Au fil des ans, notre passion pour l'hospitalité nous a poussés à créer un lieu unique où le raffinement 
+                    français rencontre la chaleur de l'accueil malgache.
+                </p>
+                <p>
+                    Chaque détail de notre établissement, de la sélection des matériaux nobles dans nos suites à la 
+                    création de menus gastronomiques par nos chefs, est pensé pour offrir une expérience sensorielle inégalée.
+                </p>
+                <div class="py-10 grid grid-cols-2 gap-8 border-y border-gray-100 my-10">
+                    <div class="text-center">
+                        <span class="block text-4xl font-serif text-amber-600">20+</span>
+                        <span class="text-xs uppercase tracking-widest text-gray-400">Années d'expérience</span>
+                    </div>
+                    <div class="text-center">
+                        <span class="block text-4xl font-serif text-amber-600">5000+</span>
+                        <span class="text-xs uppercase tracking-widest text-gray-400">Clients Heureux</span>
+                    </div>
+                </div>
+                <p>
+                    Notre vision pour l'avenir est de continuer à innover tout en préservant l'authenticité qui fait notre renommée. 
+                    Nous croyons que le vrai luxe réside dans les moments de sérénité et le service personnalisé.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-white py-12 mt-20 text-center">
+        <p class="text-xs tracking-widest uppercase opacity-50">© 2026 Luxury Stay Hotel - Fanantsa</p>
+    </footer>
+
+</body>
+</html>

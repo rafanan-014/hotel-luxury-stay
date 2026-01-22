@@ -10,36 +10,38 @@
    <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-slate-50 text-slate-900">
+            <!-- ========================================= */ -->
 
+            <!-- 1 - MENU FIX EN HAUT */ -->
     <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        
-        <h1 class="text-xl md:text-2xl font-bold tracking-widest text-amber-600 font-serif">
-            LUXURY STAY
-        </h1>
+            <a href="index.html">
+                <h1 class="text-xl md:text-2xl font-bold tracking-widest text-amber-600 font-serif">
+                    LUXURY STAY
+                </h1>
+            </a>
+            <div class="hidden md:flex items-center gap-10 text-[11px] font-bold uppercase tracking-[0.2em] text-gray-600">
+                <a href="index.html" class="hover:text-amber-600 transition">Accueil</a>
+                <a href="#chambres" class="hover:text-amber-600 transition">Chambres</a>
+                <a href="#about" class="hover:text-amber-600 transition">À Propos</a>
+                <a href="contact.html" class="hover:text-amber-600 transition">Contact</a>
+                <a href="contact.html" class="bg-amber-600 text-white px-5 py-2.5 rounded-sm hover:bg-black transition">Réserver</a>
+            </div>
 
-        <div class="hidden md:flex items-center gap-10 text-[11px] font-bold uppercase tracking-[0.2em] text-gray-600">
-            <a href="index.html" class="hover:text-amber-600 transition">Accueil</a>
-            <a href="#chambres" class="hover:text-amber-600 transition">Chambres</a>
-            <a href="#about" class="hover:text-amber-600 transition">À Propos</a>
-            <a href="contact.html" class="hover:text-amber-600 transition">Contact</a>
-            <a href="contact.html" class="bg-amber-600 text-white px-5 py-2.5 rounded-sm hover:bg-black transition">Réserver</a>
+            <div id="mobile-menu" class="hidden md:hidden ...">
+                <a href="index.html" class="mobile-link ...">Accueil</a>
+                <a href="#chambres" class="mobile-link ...">Chambres</a>
+                <a href="#about" class="mobile-link ...">À Propos</a>
+                <a href="contact.html" class="mobile-link ...">Contact</a>
+            </div>
+            <button id="menu-btn" class="md:hidden p-2 text-gray-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
         </div>
-
-        <div id="mobile-menu" class="hidden md:hidden ...">
-            <a href="index.html" class="mobile-link ...">Accueil</a>
-            <a href="#chambres" class="mobile-link ...">Chambres</a>
-            <a href="#about" class="mobile-link ...">À Propos</a>
-            <a href="contact.html" class="mobile-link ...">Contact</a>
-        </div>
-        <button id="menu-btn" class="md:hidden p-2 text-gray-600 focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-        </button>
-    </div>
     </nav>
-
+        <!-- ========================================= */ -->
     <section class="pt-32 pb-20 px-6">
         <div class="max-w-3xl mx-auto bg-white shadow-2xl rounded-sm p-8 md:p-12">
             <h2 class="text-3xl font-serif mb-2 text-center">Contactez-nous</h2>

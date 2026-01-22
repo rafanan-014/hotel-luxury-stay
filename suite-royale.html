@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suite Royale - Luxury Stay</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="smoothscript.js" defer></script>
+</head>
+<body class="bg-white text-slate-900 no-hero">
+
+   <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-6">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="text-xl font-bold tracking-widest font-serif">
+                LUXURY STAY
+            </a>
+            
+            <div class="hidden md:flex items-center gap-10 text-[11px] font-bold uppercase tracking-[0.2em]">
+                <a href="index.html" class="hover:text-amber-600 transition">Accueil</a>
+                <a href="index.html#chambres" class="hover:text-amber-600 transition">Chambres</a>
+                <a href="propos.html" class="hover:text-amber-600 transition">À Propos</a>
+                <a href="contact.html" class="bg-amber-600 text-white px-5 py-2.5 rounded-sm hover:bg-black transition">
+                    Réserver
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-32 pb-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="reveal">
+                <h1 class="text-5xl font-serif mb-4">Suite Royale</h1>
+                <p class="text-amber-600 font-bold text-lg mb-6">300€ / Nuit</p>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    Découvrez le summum du luxe dans notre Suite Royale. Un espace de 80m² conçu pour 
+                    offrir une expérience inoubliable avec une vue imprenable sur la ville. 
+                    Chaque meuble a été sélectionné pour son élégance et son confort.
+                </p>
+                <div class="flex gap-4">
+                    <a href="contact.html" class="bg-black text-white px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-amber-600 transition">Réserver cette suite</a>
+                </div>
+            </div>
+            <div class="relative reveal delay-300">
+                <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80" 
+                     class="rounded-sm shadow-2xl w-full h-[500px] object-cover" alt="Suite Royale Interior">
+            </div>
+        </div>
+    </header>
+
+    <section class="py-24 max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl font-serif mb-12 text-center">Équipements & Services</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div class="p-8 border border-gray-100 rounded-sm hover:shadow-md transition reveal">
+                <span class="text-3xl block mb-2">📐</span>
+                <p class="text-sm font-bold uppercase tracking-widest">80 m²</p>
+            </div>
+            <div class="p-8 border border-gray-100 rounded-sm hover:shadow-md transition reveal delay-100">
+                <span class="text-3xl block mb-2">🌐</span>
+                <p class="text-sm font-bold uppercase tracking-widest">Wi-Fi Haut Débit</p>
+            </div>
+            <div class="p-8 border border-gray-100 rounded-sm hover:shadow-md transition reveal delay-200">
+                <span class="text-3xl block mb-2">🍷</span>
+                <p class="text-sm font-bold uppercase tracking-widest">Mini Bar Premium</p>
+            </div>
+            <div class="p-8 border border-gray-100 rounded-sm hover:shadow-md transition reveal delay-300">
+                <span class="text-3xl block mb-2">🛁</span>
+                <p class="text-sm font-bold uppercase tracking-widest">Jacuzzi Privé</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-white py-12 text-center">
+        <p class="text-xs tracking-widest uppercase opacity-50">© 2026 Luxury Stay Hotel - Suite Royale</p>
+    </footer>
+
+</body>
+</html>

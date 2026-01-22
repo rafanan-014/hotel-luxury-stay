@@ -93,3 +93,34 @@ body {
     color: #1a1a1a !important;
     stroke: #1a1a1a !important;
 }
+
+/* AMPIASAINA AMIN'NY PAGE ABOUT */
+/* Reveal Effect */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s cubic-bezier(0.17, 0.55, 0.55, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-300 {
+    transition-delay: 0.3s;
+}
+
+/* Raha vao ao anaty pejy tsy misy sary (no-hero) ny navbar */
+body.no-hero #navbar {
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+body.no-hero #navbar .nav-link {
+    color: #0f172a; /* Loko mainty (slate-900) */
+}
+
+body.no-hero #navbar h1 {
+    color: #0f172a;
+}
