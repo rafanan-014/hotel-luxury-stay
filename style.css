@@ -1,0 +1,22 @@
+/* Playfair Display */
+@font-face {
+    font-family: 'Playfair Display Custom';
+    src: url('fonts/PlayfairDisplay-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+/* Poppins */
+@font-face {
+    font-family: 'Poppins Custom';
+    src: url('fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+/* Fampiharana */
+body {
+    font-family: 'Poppins Custom', sans-serif;
+}
+
+.font-serif {
+    font-family: 'Playfair Display Custom', serif;
+}
