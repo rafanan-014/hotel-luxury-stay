@@ -58,21 +58,34 @@
 }
 
 // Rehefa misokatra ny pejy
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('scroll', () => {
     const navbar = document.getElementById('navbar');
-    const heroSection = document.querySelector('header.relative.h-screen'); // Mijery raha misy Hero lehibe
+    if (!navbar) return; // Fisorahana error raha tsy misy navbar ilay pejy
 
-    if (!heroSection) {
-        // Raha tsy misy sary lehibe (header), dia ataovy mainty ny soratra
-        navbar.classList.add('bg-white', 'shadow-sm', 'text-slate-900');
-        navbar.classList.remove('text-white');
-        
-        // Raha mampiasa Tailwind ny rohy (links)
-        const navLinks = navbar.querySelectorAll('a');
-        navLinks.forEach(link => {
-            if (!link.classList.contains('bg-amber-600')) { // Tsy ovaina ny bokotra Réserver
-                link.classList.add('text-slate-900');
-            }
-        });
+    const isHasHero = document.body.classList.contains('has-hero');
+    const isNoHero = document.body.classList.contains('no-hero');
+    const scrolled = window.scrollY > 50;
+
+    if (isHasHero) {
+        // PEJY MISY HERO (Index)
+        if (scrolled) {
+            navbar.classList.add('bg-slate-900', 'shadow-lg', 'py-4', 'text-white');
+            navbar.classList.remove('py-6');
+        } else {
+            navbar.classList.remove('bg-slate-900', 'shadow-lg', 'py-4', 'text-white');
+            navbar.classList.add('py-6');
+        }
+    } 
+    else if (isNoHero) {
+        // PEJY FOTSY (Suite Royale, Propos)
+        if (scrolled) {
+            navbar.classList.add('py-4', 'shadow-md');
+            navbar.classList.remove('py-6');
+            // Ataontsika antoka fa tsy mivadika text-white izy eto
+            navbar.classList.remove('text-white');
+        } else {
+            navbar.classList.add('py-6');
+            navbar.classList.remove('py-4', 'shadow-md');
+        }
     }
 });
