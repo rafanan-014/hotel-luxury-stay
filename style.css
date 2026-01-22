@@ -24,29 +24,8 @@ body {
 }
 
 /* =========================================
-   2. ANIMATIONS
+   2. ANIMATIONS & REVEAL
    ========================================= */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.animate-fade-up {
-    animation: fadeInUp 1s ease-out forwards;
-}
-
-.delay-500 {
-    animation-delay: 0.5s;
-    opacity: 0;
-}
-
-/* Reveal on Scroll */
 .reveal {
     opacity: 0;
     transform: translateY(30px);
@@ -58,77 +37,54 @@ body {
     transform: translateY(0);
 }
 
+.delay-300 { transition-delay: 0.3s; }
+.delay-500 { transition-delay: 0.5s; }
+
 /* =========================================
-   3. NAVBAR LUXURY (THE FIX)
+   3. NAVBAR LOGIC (SMART DESIGN)
    ========================================= */
-/* 1. REHEFA ANY AN-TAMPONY (Transparent) */
+
+/* A. NY FITOVY AMIN'NY PEJY REHETRA */
 #navbar {
-    background-color: transparent !important;
     transition: all 0.4s ease-in-out !important;
 }
 
-/* Force-na ho fotsy ny soratra rehetra ao anaty navbar amin'ny voalohany */
-#navbar h1, 
-#navbar a:not(.bg-amber-600) {
-    color: white !important;
-}
-
-/* 2. REHEFA MANAO SCROLL (Class .scrolled ampian'ny JS) */
-
-/* Ity no manova ny soratra ho MAINTY rehefa mivadika fotsy ny navbar */
-#navbar.scrolled h1, 
-#navbar.scrolled a:not(.bg-amber-600) {
-    color: #1a1a1a !important;
-}
-
-/* Ho an'ny menu burger sy icon hafa */
-#navbar.scrolled svg, 
-#navbar.scrolled button {
-    color: #1a1a1a !important;
-    stroke: #1a1a1a !important;
-}
-
-/* AMPIASAINA AMIN'NY PAGE ABOUT */
-/* Reveal Effect */
-.reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 1s cubic-bezier(0.17, 0.55, 0.55, 1);
-}
-
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.delay-300 {
-    transition-delay: 0.3s;
-}
-
-/* Raha vao ao anaty pejy tsy misy sary (no-hero) ny navbar */
-body.no-hero #navbar {
-    background-color: white;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
-
-body.no-hero #navbar .nav-link {
-    color: #0f172a; /* Loko mainty (slate-900) */
-}
-
-body.no-hero #navbar h1 {
-    color: #0f172a;
-}
-
-/* Ny pejy misy Hero (Index) dia mangarahara amin'ny voalohany */
+/* B. PEJY MISY HERO (INDEX.HTML) */
+/* Amin'ny voalohany: Mangarahara sy soratra fotsy */
 .has-hero #navbar {
-    background-color: transparent;
-    color: white; /* Ataovy fotsy ny soratra eo ambonin'ny sary */
+    background-color: transparent !important;
+}
+.has-hero #navbar h1, 
+.has-hero #navbar a:not(.bg-amber-600) {
+    color: white !important;
 }
 
-/* Rehefa any amin'ny Index nefa efa nanao scroll (JS no manampy an'ity) */
-#navbar.scrolled {
-    background-color: #0f172a !important; /* Loko mainty */
-    color: white !important;
+/* Rehefa manao scroll ao amin'ny Index: Mivadika mainty (slate-900) */
+.has-hero #navbar.scrolled {
+    background-color: #0f172a !important; /* Mainty mangamanga */
     padding-top: 1rem;
     padding-bottom: 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* D. PEJY FOTSY (SUITE-ROYALE.HTML / PROPOS.HTML) */
+/* Amin'ny voalohany: Lamosina fotsy sy soratra mainty */
+.no-hero #navbar {
+    background-color: white !important;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.05);
+}
+.no-hero #navbar h1, 
+.no-hero #navbar a:not(.bg-amber-600) {
+    color: #0f172a !important;
+}
+
+/* Rehefa manao scroll ao amin'ny pejy fotsy: Ahena fotsiny ny padding */
+.no-hero #navbar.scrolled {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* Menu Burger ho an'ny mobile */
+#navbar svg {
+    stroke: currentColor;
 }

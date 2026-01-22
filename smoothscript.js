@@ -62,11 +62,9 @@ window.addEventListener('scroll', () => {
     const navbar = document.getElementById('navbar');
     if (!navbar) return;
 
-    if (document.body.classList.contains('has-hero')) {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled', 'shadow-lg');
-        } else {
-            navbar.classList.remove('scrolled', 'shadow-lg');
-        }
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
     }
 });
