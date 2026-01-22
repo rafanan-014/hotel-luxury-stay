@@ -1,38 +1,31 @@
-/* Playfair Display */
+/* =========================================
+   1. FONTS & RESET
+   ========================================= */
 @font-face {
     font-family: 'Playfair Display Custom';
     src: url('fonts/PlayfairDisplay-Bold.ttf') format('truetype');
     font-weight: bold;
 }
 
-/* Poppins */
 @font-face {
     font-family: 'Poppins Custom';
     src: url('fonts/Poppins-Regular.ttf') format('truetype');
     font-weight: normal;
 }
 
-/* Fampiharana */
 body {
     font-family: 'Poppins Custom', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .font-serif {
     font-family: 'Playfair Display Custom', serif;
 }
-/* Ny toetran'ilay zavatra mbola miafina */
-.reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease-out;
-}
 
-/* Ny toetran'ilay zavatra rehefa hita (active) */
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-/* Animation mipoitra avy hatrany */
+/* =========================================
+   2. ANIMATIONS
+   ========================================= */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -48,8 +41,55 @@ body {
     animation: fadeInUp 1s ease-out forwards;
 }
 
-/* Fanampiny: asiana delay kely ny paragrafy vao mipoitra */
 .delay-500 {
     animation-delay: 0.5s;
-    opacity: 0; /* Miafina aloha mandra-pandeha ny animation */
+    opacity: 0;
+}
+
+/* Reveal on Scroll */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================================
+   3. NAVBAR LUXURY (THE FIX)
+   ========================================= */
+/* 1. REHEFA ANY AN-TAMPONY (Transparent) */
+#navbar {
+    background-color: transparent !important;
+    transition: all 0.4s ease-in-out !important;
+}
+
+/* Force-na ho fotsy ny soratra rehetra ao anaty navbar amin'ny voalohany */
+#navbar h1, 
+#navbar a:not(.bg-amber-600) {
+    color: white !important;
+}
+
+/* 2. REHEFA MANAO SCROLL (Class .scrolled ampian'ny JS) */
+#navbar.scrolled {
+    background-color: white !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+}
+
+/* Ity no manova ny soratra ho MAINTY rehefa mivadika fotsy ny navbar */
+#navbar.scrolled h1, 
+#navbar.scrolled a:not(.bg-amber-600) {
+    color: #1a1a1a !important;
+}
+
+/* Ho an'ny menu burger sy icon hafa */
+#navbar.scrolled svg, 
+#navbar.scrolled button {
+    color: #1a1a1a !important;
+    stroke: #1a1a1a !important;
 }
