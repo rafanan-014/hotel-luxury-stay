@@ -74,12 +74,6 @@ body {
 }
 
 /* 2. REHEFA MANAO SCROLL (Class .scrolled ampian'ny JS) */
-#navbar.scrolled {
-    background-color: white !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
-    padding-top: 12px !important;
-    padding-bottom: 12px !important;
-}
 
 /* Ity no manova ny soratra ho MAINTY rehefa mivadika fotsy ny navbar */
 #navbar.scrolled h1, 
@@ -123,4 +117,18 @@ body.no-hero #navbar .nav-link {
 
 body.no-hero #navbar h1 {
     color: #0f172a;
+}
+
+/* Ny pejy misy Hero (Index) dia mangarahara amin'ny voalohany */
+.has-hero #navbar {
+    background-color: transparent;
+    color: white; /* Ataovy fotsy ny soratra eo ambonin'ny sary */
+}
+
+/* Rehefa any amin'ny Index nefa efa nanao scroll (JS no manampy an'ity) */
+#navbar.scrolled {
+    background-color: #0f172a !important; /* Loko mainty */
+    color: white !important;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
