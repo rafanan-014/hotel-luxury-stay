@@ -20,3 +20,36 @@ body {
 .font-serif {
     font-family: 'Playfair Display Custom', serif;
 }
+/* Ny toetran'ilay zavatra mbola miafina */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+/* Ny toetran'ilay zavatra rehefa hita (active) */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Animation mipoitra avy hatrany */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-up {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Fanampiny: asiana delay kely ny paragrafy vao mipoitra */
+.delay-500 {
+    animation-delay: 0.5s;
+    opacity: 0; /* Miafina aloha mandra-pandeha ny animation */
+}

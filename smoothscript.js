@@ -33,3 +33,30 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// --- REVEAL ANIMATION ON SCROLL ---
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
+    });
+}, { threshold: 0.1 }); // 10% amin'ilay zavatra no hita dia mandeha ny animation
+
+// Tadiavo ny zavatra rehetra misy class "reveal"
+const revealElements = document.querySelectorAll('.reveal');
+revealElements.forEach((el) => observer.observe(el));
+
+const navbar = document.getElementById('navbar');
+
+window.onscroll = function() {
+    if (window.scrollY > 50) {
+        // Rehefa midina: Lasa mainty sy kely
+        navbar.classList.add('bg-black/90', 'backdrop-blur-md', 'py-4', 'shadow-lg');
+        navbar.classList.remove('py-6');
+    } else {
+        // Rehefa any an-tampony: Miverina mangarahara sy lehibe
+        navbar.classList.remove('bg-black/90', 'backdrop-blur-md', 'py-4', 'shadow-lg');
+        navbar.classList.add('py-6');
+    }
+};
